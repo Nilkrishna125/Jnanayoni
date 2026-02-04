@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { Book, Library, Student, UserRole, UserBase, Transaction } from '../types';
+import { createContext, useContext, useState, ReactNode } from 'react';
+import { Book, Library, Student, UserRole, Transaction } from '../types';
 import { MOCK_BOOKS, MOCK_LIBRARIES, MOCK_STUDENT } from '../constants';
 
 interface DataContextType {
@@ -117,6 +117,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         description: 'New Library',
         address: 'Update address in profile',
         contactPhone: '',
+        contactEmail: email, // Fix: Add contactEmail
         imageUrl: 'https://picsum.photos/800/400',
         enrolledStudents: []
       };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../services/LanguageContext';
-import { Bell, BookOpen, LogOut, Menu, Globe, User } from 'lucide-react';
+import { Bell, BookOpen, LogOut, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { MOCK_NOTIFICATIONS } from '../constants';
 

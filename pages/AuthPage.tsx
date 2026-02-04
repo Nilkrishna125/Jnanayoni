@@ -10,7 +10,7 @@ interface AuthPageProps {
 }
 
 export const AuthPage: React.FC<AuthPageProps> = ({ role }) => {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
   const { login, register } = useData();
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);

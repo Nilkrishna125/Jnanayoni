@@ -33,7 +33,7 @@ const AppRoutes: React.FC = () => {
         path="/" 
         element={
           !userRole ? (
-            <Landing onRoleSelect={(role) => {}} />
+            <Landing onRoleSelect={() => {}} />
           ) : userRole === UserRole.STUDENT ? (
             <Navigate to="/student/dashboard" replace />
           ) : (

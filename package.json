@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://nilkrishna125.github.io/Jnanayoni",
+  "homepage": "https://<your-username>.github.io/<repo-name>",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

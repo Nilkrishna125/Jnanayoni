@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../../services/LanguageContext';
 import { useData } from '../../services/DataContext';
 import { Upload, Users, Book as BookIcon, AlertCircle, Plus, Search, Image as ImageIcon, History } from 'lucide-react';
-import { Book, Library } from '../../types';
+import { Book, Library, Transaction } from '../../types';
 
 export const LibraryAdminDashboard: React.FC = () => {
   const { t } = useLanguage();
@@ -67,12 +67,12 @@ export const LibraryAdminDashboard: React.FC = () => {
   
   // Group history by student for the Students Tab
   const getUniqueStudents = () => {
-    const studentsMap = new Map();
+    const studentsMap = new Map<string, { id: string, name: string, history: Transaction[] }>();
     libraryHistory.forEach(tx => {
        if (!studentsMap.has(tx.studentId)) {
          studentsMap.set(tx.studentId, { id: tx.studentId, name: tx.studentName, history: [] });
        }
-       studentsMap.get(tx.studentId).history.push(tx);
+       studentsMap.get(tx.studentId)!.history.push(tx);
     });
     return Array.from(studentsMap.values());
   };
