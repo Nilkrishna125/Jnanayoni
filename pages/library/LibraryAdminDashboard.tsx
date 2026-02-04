@@ -68,7 +68,7 @@ export const LibraryAdminDashboard: React.FC = () => {
   // Group history by student for the Students Tab
   const getUniqueStudents = () => {
     const studentsMap = new Map<string, { id: string, name: string, history: Transaction[] }>();
-    libraryHistory.forEach(tx => {
+    libraryHistory.forEach((tx: any) => {
        if (!studentsMap.has(tx.studentId)) {
          studentsMap.set(tx.studentId, { id: tx.studentId, name: tx.studentName, history: [] });
        }
