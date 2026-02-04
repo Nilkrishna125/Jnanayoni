@@ -1,0 +1,7 @@
+{
+  "name": "Jñānayoni",
+  "description": "A comprehensive digital library management system connecting libraries and readers with support for digital resources and book issuance.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
